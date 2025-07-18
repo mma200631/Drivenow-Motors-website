@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <meta name="description" content="Browse all available vehicles at DriveNow Motors" >
+  <meta name="author" content="Assumpta Okpanachi" >
+  <meta property="og:title" content="DriveNow Motors" >
+  <meta property="og:description" content="Browse all available vehicles at DriveNow Motors." >
+  <meta property="og:image" content="https://mma200631.github.io/wdd231/finalproject/images/social-image.png" >
+  <meta property="og:locale" content="en-US">
+  <meta property="og:url" content="https://mma200631.github.io/wdd231/finalproject/inventory.html" >
+  <title>DriveNow Motors | Inventory</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles/main.css" >
+  <script type="module" src="scripts/inventory.mjs"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<body>
+  <header>
+    <div class="logo">DriveNow Motors</div>
+    <button id="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
+    <nav id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="inventory.html" class="active">Inventory</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+        <img src="images/heroimage2.webp" alt="hero-image" loading="lazy">
+      <div class="hero-overlay">
+        <div class="hero-text">
+          <h1>Browse Our Inventory</h1>
+          <p>Find the perfect car from our extensive selection.</p>
+
+          
+        </div>
+      </div>
+    </section>
+    <section class="search-filter">
+      <h2>Search and Filter</h2>
+      <form id="inventory-filter-form">
+        <label for="make">Make:</label>
+        <select id="make" name="make">
+          <option value="">All</option>
+          <option value="Toyota">Toyota</option>
+          <option value="Honda">Honda</option>
+          <option value="Ford">Ford</option>
+          <option value="Chevrolet">Chevrolet</option>
+          <option value="Dodge">Dodge</option>
+          <option value="Lamborghini">Lamborghini</option>
+          <option value="Rolls-Royce">Rolls-Royce</option>
+          <option value="Mercedes Benz">Mercedes Benz</option>
+          <option value="BMW">BMW</option>
+          <option value="Audi">Audi</option>
+          <option value="Subaru">Subaru</option>
+          <option value="Bugatti">Bugatti</option>
+          <option value="Volkswagen">Volkswagen</option>
+          <option value="Jeep">Jeep</option>
+          <option value="Lexus">Lexus</option>
+        </select>
+
+        <label for="price">Max Price:</label>
+        <input type="number" id="price" name="price" placeholder="e.g., 25000">
+
+        <button type="submit">Apply Filters</button>
+      </form>
+    </section>
+
+    <section>
+      <div id="inventory-container" class="car-grid">
+        <!-- Dynamic vehicle cards will be injected here -->
+      </div>
+    </section>
+
+    <div id="vehicleModal" class="modal hidden" role="dialog" aria-modal="true">
+      <div class="modal-content">
+        <span class="close-button" id="closeModal">&times;</span>
+        <div id="modalDetails"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> DriveNow Motors | All rights reserved</p>
+    
+  </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
